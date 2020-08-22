@@ -3,18 +3,13 @@ import axios from './axios'
 export const BANNER = 'banner'
 export const RECOMMEND = 'recommend'
 
-export function getHomeMultidata() {
-  return axios({
-    url: '/home/multidata'
-  })
-}
 
-export function getHomeData(type, page) {
+export function logins(login) {
   return axios({
-    url: '/home/data',
+    url: '/login',
     params: {
-      type,
-      page
+      username: login.username,
+      password: login.password
     }
   })
 }
