@@ -10,11 +10,30 @@ const routes = [
   },
   {
     path: '/login',
-    component: () => import('../components/content/Login')
+    component: () => import('../components/content/Login'),
   },
   {
     path: '/home',
-    component: () => import('../components/content/Home')
+    component: () => import('../views/Home'),
+    redirect: '/welcome',
+    children: [
+      {
+        path: '/welcome',
+        component: () => import('../components/content/main/Welcome')
+      },
+      {
+        path: '/users',
+        component: () => import('../views/users/Users')
+      },
+      {
+        path: '/roles',
+        component: () => import('../views/roles/Roles')
+      },
+      {
+        path: '/rights',
+        component: () => import('../views/roles/Rights')
+      }
+    ]
   }
 ]
 
