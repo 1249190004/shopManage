@@ -47,8 +47,8 @@
       }
     },
     computed: {
-      getHighElement(){
-        return this.$route.path
+      getHighElement() {
+        return this.$route.meta.GuidePath ? this.$route.meta.JumpPath : this.$route.path
       }
     },
     created() {

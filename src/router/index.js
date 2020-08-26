@@ -32,6 +32,30 @@ const routes = [
       {
         path: '/rights',
         component: () => import('../views/roles/Rights')
+      },
+      {
+        path: '/categories',
+        component: () => import('../views/goods/Category')
+      },
+      {
+        path: '/params',
+        component: () => import('../views/goods/Params')
+      },
+      {
+        path: '/goods',
+        component: () => import('../views/goods/List'),
+      },
+      {
+        path: '/goods/add',
+        component: () => import('../views/goods/AddGoods'),
+        meta: {
+          GuidePath: true,
+          JumpPath: '/goods'
+        }
+      },
+      {
+        path: '/orders',
+        component: () => import('../views/orders/Orders')
       }
     ]
   }

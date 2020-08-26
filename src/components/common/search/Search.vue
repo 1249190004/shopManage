@@ -6,7 +6,7 @@
       </el-input>
     </el-col>
     <el-col :span="4">
-      <el-button type="primary" @click="addUser">添加用户</el-button>
+      <el-button type="primary" @click="addUser"><slot>添加用户</slot></el-button>
     </el-col>
   </el-row>
 </template>
